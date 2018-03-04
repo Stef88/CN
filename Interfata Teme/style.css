@@ -1,0 +1,12 @@
+.list-group-item {
+	display: inline-block;
+}
+.tab-pane,
+.tab-pane h2,
+.tab-pane p {
+	text-align: center;
+}
+
+.tab-pane .btn {
+	cursor: pointer;
+}
