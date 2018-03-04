@@ -227,12 +227,11 @@ var Matrix = {};
     if (orig.n !== orig.m) {
       throw "incompatible matrices, different dimensions";
     }
-
     var nextN = nextPow2(orig.n);
-    if (nextN/2 === orig.n) {
-      // Don't need to grow it
-      return orig;
-    }
+    // if (nextN/2 === orig.n) {
+    //   // Don't need to grow it
+    //   return orig;
+    // }
     var grownMat = Matrix.new(nextN, nextN);
     for (var i = 0; i < orig.n; i++) {
       for (var j = 0; j < orig.n; j++) {
@@ -265,13 +264,13 @@ var Matrix = {};
     var B21 = B.partition(n/2, 0,   n,   n/2, "B21");
     var B22 = B.partition(n/2, n/2, n,   n,   "B22");
 
-    var P1 = Matrix.new(n, n, "M1");
-    var P2 = Matrix.new(n, n, "M2");
-    var P3 = Matrix.new(n, n, "M3");
-    var P4 = Matrix.new(n, n, "M4");
-    var P5 = Matrix.new(n, n, "M5");
-    var P6 = Matrix.new(n, n, "M6");
-    var P7 = Matrix.new(n, n, "M7");
+    var P1 = Matrix.new(n, n, "P1");
+    var P2 = Matrix.new(n, n, "P2");
+    var P3 = Matrix.new(n, n, "P3");
+    var P4 = Matrix.new(n, n, "P4");
+    var P5 = Matrix.new(n, n, "P5");
+    var P6 = Matrix.new(n, n, "P6");
+    var P7 = Matrix.new(n, n, "P7");
 
     leafSize++;
 
